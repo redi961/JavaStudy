@@ -1,0 +1,21 @@
+package edu;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+
+		for (int a = 2; a <= 9 ; a++) {
+			if (a%6 == 0) {
+				System.out.println(" ");
+			}
+			for (int b = 2; b <=9 ; b++) {
+				System.out.printf("%d * %d = %d \t", b , a , a*b);
+			}			
+		}
+		
+	}
+
+}
