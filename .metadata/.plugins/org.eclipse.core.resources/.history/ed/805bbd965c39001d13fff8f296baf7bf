@@ -1,0 +1,12 @@
+package edu;
+
+public class Testing05 {
+
+	int a[][] = new int [2][3];
+	int b[][] = new int [3][2];
+	int c[][] = {};
+	
+	
+	
+	
+}
