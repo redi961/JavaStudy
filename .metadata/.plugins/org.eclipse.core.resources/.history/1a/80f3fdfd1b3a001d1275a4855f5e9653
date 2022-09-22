@@ -1,0 +1,32 @@
+package edu;
+
+import com.ruby.java.test1.*;
+
+
+public class Testing06 {
+
+	public static void main(String[] args) {
+		
+		Armor armor = new Armor();
+		
+		
+		// armor.dddd();
+		armor.setName("ABCD");
+		String n = armor.getName();
+		System.out.println("Name is : " + n);
+		
+		
+		armor.setSpeed(30, 100);
+		int speed = armor.getSpeed();
+		int maxSpeed = armor.getMaxSpeed();
+		
+		//armor.printName();
+		//armor.takeOff();
+
+		
+		System.out.println("Speed : " + speed + "\t Max Speed : " + maxSpeed );
+		
+	}
+
+}
+

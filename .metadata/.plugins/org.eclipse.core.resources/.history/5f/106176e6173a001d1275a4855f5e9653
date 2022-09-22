@@ -1,0 +1,24 @@
+package edu;
+
+import com.ruby.java.test1.*;
+
+
+public class Testing06 {
+
+	public static void main(String[] args) {
+		
+		Armor armor = new Armor();
+		String n = armor.getName();
+		
+		armor.dddd();
+		armor.setName("ABCD");
+		
+		
+		
+		armor.printName();
+		armor.takeOff();
+		
+	}
+
+}
+

@@ -1,0 +1,55 @@
+package com.ruby.java.test1;
+
+import com.ruby.java.test2.*;
+import java.util.List;
+import java.io.*;
+
+
+
+public class Armor {
+	private String name;
+	private int height;
+	private int weight;
+	private String color;
+	private boolean isFly;
+	int speed;
+	int maxSpeed;
+	
+		
+	private void work () {
+		System.out.println("동작하다");
+	}
+	
+	public void dddd () {
+		System.out.println("동작하다");
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	
+	public void printName() {
+		System.out.println("My name is " + name);
+	}
+	
+	public int takeOff() {
+		System.out.println("엔진을 구동하다");
+		System.out.println("엔진 구동에 실패하다");
+		return 0;
+	}
+	public void setSpeed (int speed, int maxSpeed) {
+		this.speed = speed;
+		this.maxSpeed = maxSpeed;
+	}
+	public int getSpeed() {
+		return speed;
+	}
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+
+	
+}
