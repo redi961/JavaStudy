@@ -5,6 +5,7 @@ import com.ruby.java.test1.*;
 
 public class Testing06 {
 
+	
 	public static void main(String[] args) {
 		
 		Armor armor = new Armor();

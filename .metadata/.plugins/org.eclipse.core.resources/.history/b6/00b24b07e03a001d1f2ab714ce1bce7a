@@ -1,0 +1,23 @@
+package edu;
+import java.util.Random;
+import edu.Procession;
+
+
+
+public class ProcEx {
+
+	public static void main(String[] args) {
+		
+		Procession pr = new Procession();
+		
+		pr.setNum1(4, 4);
+		pr.setNum2(4, 5);
+		pr.showLength();
+		
+		
+		pr.setRandom();
+
+
+	}
+
+}

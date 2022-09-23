@@ -9,4 +9,7 @@
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="edu.procession"/>
     <fullyQualifiedTypeName name="edu.Procession"/>
+    <fullyQualifiedTypeName name="ArmorTest.StaticMethodTest"/>
+    <fullyQualifiedTypeName name="javax.management.loading.PrivateClassLoader"/>
+    <fullyQualifiedTypeName name="com.ruby.java.test1.Student"/>
 </qualifiedTypeNameHistroy>

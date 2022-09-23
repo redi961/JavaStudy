@@ -1,0 +1,18 @@
+package ArmorTest;
+
+public class StaticMethodTest {
+	public static void main(String[] args) {
+		StaticMethodTest.print1();
+		print1();
+		print2();
+		StaticMethodTest s = new StaticMethodTest();
+	}
+
+	public static void print1() {
+		System.out.println("hello");
+	}
+
+	public void print2() {
+		System.out.println("java");
+	}
+}
