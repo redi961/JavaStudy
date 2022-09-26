@@ -4,6 +4,12 @@ class Person {
 	private int age;
 	private String dept;
 	
+	public Person () {}
+	public Person(String s, int a, String d) {
+		name = s; age = a; dept = d;
+		System.out.println();
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -29,11 +35,19 @@ class Person {
 	}
 	
 }
-public class Employee {
-
+public class Employee extends Person {
 	private String name;
+	private int salary;
 	private int age;
 	private String dept;
+	
+	public Employee(String s, int a, String d, int pay) {
+		super(s,a,d);
+		System.out.println("Employee()::");
+		salary = pay;
+		
+		
+	}
 	
 	public String getName() {
 		return name;
@@ -60,11 +74,10 @@ public class Employee {
 	}
 	
 	public static void main(String[] args) {
-		Employee e = new Employee();
+		Employee e = new Employee("m", 1000, "d", 2000);
 		e.setAge(10);
 		Person p = new Person();
 		System.out.println("Age : " + e.getAge());
-		Employee e2 = new Employee();
 		Student st = new Student();
 		st.setAge(15);
 		System.out.println("Student Age : " + st.getAge());
