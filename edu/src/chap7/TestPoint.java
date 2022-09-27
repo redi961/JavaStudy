@@ -9,6 +9,9 @@ public class TestPoint extends Point {
 		c.setColor(35, 55,"blue");
 		c.Show();
 		
+		c.setColor(90,80,"red");
+		c.Show();
+		
 		/*c.setPoint(50, 80);*/
 		/*c.setColor2("Red");*/
 		/*c.display2();*/

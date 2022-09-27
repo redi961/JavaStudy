@@ -13,14 +13,12 @@ public class ColorPoint extends Point {
 	
 	public void setColor (int x, int y, String c) {
 		super.setPoint (x,y);
-		color = c;
+		super.setColor(c);
 	}
 	
 	public void Show () {
 		System.out.println("X : " + getx() + " Y : " + gety() + " Color : " + getc());
 	}
-	
-	
 	
 	/*오버라이딩 연습 */
 	/*public void setColor2(String color) {
