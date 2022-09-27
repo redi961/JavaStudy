@@ -3,20 +3,21 @@ package chap7;
 	/*Point Class를 상속하는 ColorPoint Class 작성*/
 public class ColorPoint extends Point {
 	
-	private String color;
-	
-	
-	public void setColor (int x, int y, String color) {
-		setPoint(x, y);
-		this.color = color;
+	public ColorPoint() {
 		
-	/*Point를 상속하여서 setPoint x,y값 선언 사용가능*/
-		
-	/*System.out.println("x : " + x + " y : " + y + " // color : " + color);*/
 	}
 	
-	public String display () {
-		return "x : " + x + " y : " + y + " // color : " + this.color;
+	public ColorPoint (int x,int y) {
+		super(x,y);	
+	}
+	
+	public void setColor (int x, int y, String c) {
+		super.setPoint (x,y);
+		color = c;
+	}
+	
+	public void Show () {
+		System.out.println("X : " + getx() + " Y : " + gety() + " Color : " + getc());
 	}
 	
 	
