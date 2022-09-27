@@ -2,9 +2,9 @@ package chap7;
 
 public class Point {
 	/*Color Point에서 접근을 가능하게 하기위하여 private -> public으로 접근자를 변경함*/
-	private int x,y;
+	public int x,y;
 	
-	public Point (int x, int y) {
+	public void setPoint (int x, int y) {
 		this.x = x;
 		this.y = y;
 	

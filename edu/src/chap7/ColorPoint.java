@@ -6,7 +6,7 @@ public class ColorPoint extends Point {
 	private String color;
 	
 	
-	public ColorPoint (int x, int y, String color) {
+	public void setColor (int x, int y, String color) {
 		setPoint(x, y);
 		this.color = color;
 		
