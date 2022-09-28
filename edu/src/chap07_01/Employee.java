@@ -1,4 +1,4 @@
-package chap7;
+package chap07_01;
 class Person {
 	private String name;
 	private int age;

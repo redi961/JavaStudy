@@ -1,4 +1,4 @@
-package chap7;
+package chap07_01;
 
 	/*Point Class를 상속하는 ColorPoint Class 작성*/
 public class ColorPoint extends Point {

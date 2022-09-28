@@ -1,10 +1,10 @@
-package chap7;
+package chap07_01;
 
 
 
 public class Point {
-	/*Color Point에서 접근을 가능하게 하기위하여 private -> public으로 접근자를 변경함*/
-	// 상속으로 변수 호출을 위하여 Protected 혹은 Default 형태로 설정해야함
+	//Color Point에서 접근을 가능하게 하기위하여 private -> public으로 접근자를 변경함
+	// 상속으로 변수 호출을 하려면 접근자를 Protected 혹은 Default 형태로 설정해야함
 	private int x,y;
 	private String color;
 
@@ -14,6 +14,7 @@ public class Point {
 	public Point (int x, int y) {
 		this.x = x;
 		this.y = y;
+		System.out.println("2개");
 	}
 	
 	public void setPoint (int x, int y) {

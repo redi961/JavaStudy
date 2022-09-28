@@ -1,4 +1,4 @@
-package chap7;
+package chap07_01;
 
 public class Student {
 	
