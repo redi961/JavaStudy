@@ -1,6 +1,5 @@
 package com.ruby.java.test1;
 
-
 import com.ruby.java.test2.*;
 import java.util.List;
 import java.io.*;
