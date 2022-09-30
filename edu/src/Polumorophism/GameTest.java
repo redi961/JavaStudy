@@ -25,18 +25,24 @@ public class GameTest {
 		u = new Unit [] {tank, air, sub, kim};
 		for (Unit b : u ) b.move();
 		
-		// 아래 컬렉션 형식은 자주쓰이므로 기억해둘것
+		// 아래 컬렉션 형식은 자주쓰이므로 기억해둘것 / Vector와 ArrayList는 기본적인 정의는 동일함
+		// 어레이 리스트는 단일쓰레드 형식의 프로그램에 최적화되어 자주 사용됨
 		System.out.println("=================");
 		{
 			List<Unit> b = new ArrayList<>();
-			b.add(new Tank("Tank"));
-			b.add(new Airplane("air"));
-			b.add(new Submarine("sub"));
-			b.add(new Soldier("min"));
+			b.add(new Tank("A:Tank"));
+			b.add(new Airplane("A:air"));
+			b.add(new Submarine("A:sub"));
+			b.add(new Soldier("A:min"));
+			b.remove(2);
 			System.out.println("=================");
-			for (Unit c : b) c.attack();
+			for (Unit c : b) {
+				c.attack();	
+			}
+			System.out.println("=================");
 		}
 		{
+		// 벡터 형식은 멀티쓰레드 형식의 프로그램에 최적화되어 자주 사용됨	
 			Vector<Unit> c = new Vector<>();
 			c.add(new Tank("V:Ta"));
 			c.add(new Airplane("V:air"));
