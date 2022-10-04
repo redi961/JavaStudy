@@ -1,7 +1,5 @@
 package Test;
 
-
-
 abstract class Person {
 	
 	private String pnum;
@@ -157,7 +155,7 @@ public class TestPersons  {
 	
 		
 	public static void main(String[] args) {
-		Person [] setP = new Person[4];
+		Person setP []  = new Person[4];
 		getData(setP);
 		showAll(setP);
 		increaseAll(setP);
