@@ -21,34 +21,47 @@ abstract class Person {
 	}
 }
  
- class Employee extends Person {
-		
-		private String job;
-		private String dept;
-		private int salary;
-			
-		public Employee () {}
-		public Employee (String pn, String n, int a, String j, String de, int sal) {
-			super(pn,n,a);
-			this.job = j;
-			this.dept = de;
-			this.salary = sal;
-		}
-		
-		public void show() {
-			System.out.println(toString());
-			System.out.println("=====================");
-		}
-		
-		public void increase () {
-			salary *= 1.1;
-		}
-		
-		public String toString () {
-			return super.toString() + "\n직업 : " + job + "부서 : " + "연봉 : " + salary + "만원";
-		}
-		
+class Employee extends Person implements Message {
+	
+	private String job;
+	private String dept;
+	private int salary;
+	private String message;
+	
+	public Employee () {}
+	public Employee (String pn, String n, int a, String j, String de, int sal) {
+		super(pn,n,a);
+		this.job = j;
+		this.dept = de;
+		this.salary = sal;
 	}
+	
+	public void show() {
+		System.out.println(toString());
+		System.out.println("=====================");
+	}
+	
+	public void increase () {
+		salary *= 1.1;
+	}
+	
+	public String toString () {
+		return super.toString() + "\n직업 : " + job + "부서 : " + "연봉 : " + salary + "만원";
+	}
+	@Override
+	public String getMessage() {
+		return message;
+	}
+	@Override
+	public void setMessage(String msg) {
+		this.message = msg;			
+	}
+	static void messageShowAll (Message m []) {
+		for(int i=0; i<m.length; i++) {
+			m[i].getMessage();
+		}
+	}
+}
 
   class Designer extends Employee {
  	
@@ -136,6 +149,7 @@ public class TestPersons  {
 			p[i].show();
 		}
 	}
+
 	static void increaseAll(Person p []) {
 		for (int i = 0; i<p.length;i++) {
 			p[i].increase();
@@ -152,14 +166,16 @@ public class TestPersons  {
 		p[2] = s;
 		p[3] = w;
 	}
+
 	
-		
 	public static void main(String[] args) {
-		Person setP []  = new Person[4];
+		Person [] setP = new Person[4];
 		getData(setP);
 		showAll(setP);
 		increaseAll(setP);
 		showAll(setP);
-		
+				
+		Message m [] = new Message[4];
+				
 	}
 }
