@@ -1,0 +1,22 @@
+package Merge;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Exam01 {
+public static void main(String[] args) {
+	ArrayList<String> list1 = new ArrayList<String>();
+	list1.add("서울");
+	list1.add("북경");
+	list1.add("상해");
+	list1.add("서울");
+	list1.add("도쿄");
+	list1.add("뉴욕");
+	Scanner sc = new Scanner(System.in);
+	
+	String input = sc.next();
+}
+	
+	
+}

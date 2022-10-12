@@ -1,0 +1,14 @@
+package Merge;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Exam01 {
+
+	ArrayList<String> list = new ArrayList<>();
+	Scanner sc = new Scanner(System.in);
+	
+	String input = sc.next();
+	
+}

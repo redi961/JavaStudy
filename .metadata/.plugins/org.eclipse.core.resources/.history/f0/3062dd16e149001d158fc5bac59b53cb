@@ -1,0 +1,9 @@
+package Merge;
+
+import java.util.ArrayList;
+
+public class Exam01 {
+
+	ArrayList<String> list = new ArrayList<>();
+	
+}

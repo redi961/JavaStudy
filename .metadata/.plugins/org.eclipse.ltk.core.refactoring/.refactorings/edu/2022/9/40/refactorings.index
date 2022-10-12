@@ -1,0 +1,23 @@
+1664325801237	Copy compilation unit
+1664325807117	Delete element
+1664335798910	Delete element
+1664335815767	Rename package 'chap7'
+1664335843832	Rename compilation unit 'HRTest.java'
+1664336350878	Rename package 'chap08'
+1664336356661	Rename package 'chap07'
+1664336951036	Delete element
+1664336991534	Rename compilation unit 'Messanger.java'
+1664415803842	Rename compilation unit 'Drink.java'
+1664415986735	Rename compilation unit 'UnitMain.java'
+1664417118292	Delete element
+1664418276949	Extract interface 'TankInterface'
+1664418618898	Delete element
+1664419828447	Extract interface 'TankAttack'
+1664420257807	Delete element
+1664422391352	Extract interface 'UnitMove'
+1664422725643	Delete element
+1664504686721	Rename type 'TestPerson'
+1664505031074	Delete element
+1664505308346	Delete element
+1664505579253	Rename type 'Persons'
+1664508744232	Rename compilation unit 'Person.java'
