@@ -38,6 +38,7 @@ public class Merge_assignment_java {
 			    	System.out.print(city+ " ");
 				ArrayList<String> list3 = new ArrayList<String>();
 				
+				
 				Iterator<String> iter1 = list1.iterator();
 				//Iterator 안에 다음 값이 들어있는지 확인 true or False 로 표현
 				while(iter1.hasNext()) {
