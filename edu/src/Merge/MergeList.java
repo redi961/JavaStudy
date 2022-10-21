@@ -53,10 +53,7 @@ public class MergeList {
 		}
 		return lst3;
 }
-	 
-	
 
-	
 	public static void main(String[] args) {
 
 				int i=0; 
@@ -92,7 +89,6 @@ public class MergeList {
 			    for (String city: list2)
 			    	System.out.print(city+ " ");
 				ArrayList<String> list3 = new ArrayList<String>();
-				
 				// 리스트를 Array로 변환하며 파라메터로 들어가는 인자와 Size를 맞춤
 				// 파라메터로 들어가는 인자보다 list의 Size가 클시 list의 사이즈를 유지하며
 				// list의 Size가 인자보다 작을시 인자의 Size로 Array를 구축한다.
@@ -101,12 +97,10 @@ public class MergeList {
 				String []lst2 = new String[0];
 				lst2 = list2.toArray(lst2);
 				String [] lst3 = new String[10];
-				
 				int count = lst1.length;
-				
-				
 				Collections.sort(list1);
 				Collections.sort(list2);
+				
 				Iterator<String> iter1 = list1.iterator();
 //				while(iter1.hasNext()) {
 //					String obj = (String)iter1.next();
@@ -118,9 +112,8 @@ public class MergeList {
 //					String obj = (String)iter2.next();
 //					list3.add(obj);
 //				}
-
+				
 				System.out.println("");
-
 				String st1 = iter1.next();
 				String st2 = iter2.next();
 				while (iter1.hasNext() && iter2.hasNext()) {
@@ -147,12 +140,11 @@ public class MergeList {
 						st2 = iter2.next();
 					}
 				}
-				
+			
 				Iterator<String> iter3 = list3.iterator();
 				System.out.print("MergeList :: ");
 				for (String city : list3)
 					System.out.print(city + " ");
-				
 				while (iter3.hasNext()) {
 					count = 0;
 					String str = iter3.next();
@@ -172,7 +164,6 @@ public class MergeList {
 				}
 				
 				Collections.sort(list3);
-//				
 				lst1 = removeDuplicate(lst1);
 				lst2 = removeDuplicate(lst2);
 				
@@ -186,13 +177,12 @@ public class MergeList {
 					System.out.print(city + " ");
 				
 				Insertlst(lst1, lst2, lst3);
-				
 				System.out.println("");
 				
-				String [] lst4 = new String[lstcnt];
-				for (i=0; i<lstcnt; i++) {
-					lst4[i] = lst3[i];
-				}
+//				String [] lst4 = new String[lstcnt];
+//				for (i=0; i<lstcnt; i++) {
+//					lst4[i] = lst3[i];
+//				}
 				
 				System.out.print("list 3 :: ");
 				for (String city : lst3)

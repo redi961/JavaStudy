@@ -10,7 +10,8 @@ public class Fruit implements Comparable<Fruit> {
 
 	    @Override
 	    public String toString() {
-	        return "{name: " + name + ", price: " + price + "}";
+//	        return "{name: " + name + ", price: " + price + "}";
+	        return "<" + name + "," + price + ">" ;
 	    }
 
 		@Override
@@ -20,5 +21,8 @@ public class Fruit implements Comparable<Fruit> {
 			else return this.name.compareTo(o.name);
 			// TODO Auto-generated method stub
 		}
-	
+
+		public int getPrice() {
+			return price;
+		}
 }
