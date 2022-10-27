@@ -1,44 +1,44 @@
 package Stack;
 
-class Point {
-	private int ix;
-	private int iy;
-	private int capacity;
-
-	public Point(int x, int y) {
-		ix = x;
-		iy = y;
-		capacity = x*y;
-	}
-
-	public int getX() {
-		return ix;
-	}
-
-	public int getY() {
-		return iy;
-	}
-	public void setX(int x) {
-		ix = x;
-	}
-
-	public void setY(int y) {
-		iy = y;
-	}
-	public String toString() {
-		return "<" + ix + ", " + iy + ">";
-	}
-	public boolean isFull() {
-		return capacity <=0;
-	}
-	public int getCapacity () {
-		return capacity;
-	}
-
-}
+//class Point {
+//	private int ix;
+//	private int iy;
+//	private int capacity;
+//
+//	public Point(int x, int y) {
+//		ix = x;
+//		iy = y;
+//		capacity = x*y;
+//	}
+//
+//	public int getX() {
+//		return ix;
+//	}
+//
+//	public int getY() {
+//		return iy;
+//	}
+//	public void setX(int x) {
+//		ix = x;
+//	}
+//
+//	public void setY(int y) {
+//		iy = y;
+//	}
+//	public String toString() {
+//		return "<" + ix + ", " + iy + ">";
+//	}
+//	public boolean isFull() {
+//		return capacity <=0;
+//	}
+//	public int getCapacity () {
+//		return capacity;
+//	}
+//
+//}
 
 public class Stack2 {
-	private Point[] stk; // 스택용 배열
+	private items[] stk; // 스택용 배열
 	private int capacity; // 스택의 크기
 	private int ptr; // 스택 포인터
 
@@ -59,28 +59,28 @@ public class Stack2 {
 		ptr = 0;
 		capacity = maxlen;
 		try {
-			stk = new Point[capacity]; // 스택 본체용 배열을 생성
+			stk = new items[capacity]; // 스택 본체용 배열을 생성
 		} catch (OutOfMemoryError e) { // 생성할 수 없음
 			capacity = 0;
 		}
 	}
 
 	// --- 스택에 x를 푸시 ---//
-	public Point push(Point p) throws OverflowIntStackException {
+	public items push(items p) throws OverflowIntStackException {
 		if (ptr >= capacity) // 스택이 가득 참
 			throw new OverflowIntStackException();
 		return stk[ptr++] = p;
 	}
 
 	// --- 스택에서 데이터를 팝(정상에 있는 데이터를 꺼냄) ---//
-	public Point pop() throws EmptyIntStackException {
+	public items pop() throws EmptyIntStackException {
 		if (ptr <= 0) // 스택이 빔
 			throw new EmptyIntStackException();
 		return stk[--ptr];
 	}
 
 	// --- 스택에서 데이터를 피크(peek, 정상에 있는 데이터를 들여다봄) ---//
-	public Point peek() throws EmptyIntStackException {
+	public items peek() throws EmptyIntStackException {
 		if (ptr <= 0) // 스택이 빔
 			throw new EmptyIntStackException();
 		return stk[ptr - 1];
@@ -92,7 +92,7 @@ public class Stack2 {
 	}
 
 	// --- 스택에서 x를 찾아 인덱스(벌견하지 못하면 –1)를 반환 ---//
-	public int indexOf(Point x) {
+	public int indexOf(items x) {
 		for (int i = ptr - 1; i >= 0; i--) // 정상 쪽에서 선형검색
 			if (stk[i].equals(x))
 				return i; // 검색 성공

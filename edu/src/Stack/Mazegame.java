@@ -1,93 +1,98 @@
 package Stack;
 
+import java.util.Stack;
+
+class items {
+	int x;
+	int y;
+	int dir;
+
+	public items(int a, int b, int c) {
+		this.x = a;
+		this.y = b;
+		this.dir = c;
+	}
+
+	public String toString() {
+		return "<<" + x + y + dir;
+	}
+}
+
+
+class offsets {
+	int a, b;
+}
+
 public class Mazegame {
+	
+	static offsets moves[] = new offsets[8];
 
-//struct items {
-//int x, y, dir;
-//};
-//
-//ostream& operator<<(ostream& os, items& item)
-//{
-//return os << item.x << "," << item.y << "," << item.dir;
-//}
-//
-//struct offsets {
-//int a, b;
-//};
-//
-//enum directions { N, NE, E, SE, S, SW, W, NW };
-//offsets moves[8];
+	static int maze[][] = new int[100][100];
+	static int mark[][] = new int[100][100];
 
-//int maze[100][100];
-//int mark[100][100];
-//
-
-
-	public static void main(String[] args) {
-		int[][] maze = new int[100][100];
-		int[][] mark = new int[100][100];
-
-//void path(int m, int p)
-////Output a path (if any) in the maze; rows is m, cols is p;
-//{
-//	//start at (1,1)
-//	mark[1][1] = 1;
-//	Stack<items> stack(m * p);
-//	items temp;
-//	temp.x = 1; temp.y = 1; temp.dir = E;
-//	stack.Push(temp);
-//
-//	while (!stack.IsEmpty()) // stack not empty
-//	{
-//		temp = stack.Pop(); // unstack
-//		int i = temp.x; int j = temp.y; int d = temp.dir;
-//		while (d < 8) // moves forward
-//		{
-//			//outFile << i << " " << j << " " << d << endl;
-//			int g = i + moves[d].a;
-//			int h = j + moves[d].b;
-//			if ((g == m) && (h == p)) { // reached exit
-//										// output path
-//				cout << stack;
-//
-//				cout << "the term near the exit: " << i << " " << j << endl;
-//				cout << "exit: " << m << " " << p << endl;
-//				return;
-//			}
-//			if ((!maze[g][h]) && (!mark[g][h])) { // new position
-//				mark[g][h] = 1;
-//				//push the old temp to the stack, but the direction changes.
-//				//Because the neighbor in the direction of d has been checked.
-//				temp.x = i;  temp.y = j; temp.dir = d + 1;
-//				stack.Push(temp); // stack it
-//				i = g; j = h; d = N; // moves to (g,h)
-//			}
-//			else d++; // try next direction
-//		}
+public static void path (int[][] maze2, int[][] mark2, int m, int p)
+//Output a path (if any) in the maze; rows is m, cols is p;
+{
+//	enum directions {
+//		N, NE, E, SE, S, SW, W, NW
 //	}
-//	cout << "no path in maze " << endl;
-//}
-///*
-//maze[][], mark[][]를 class의 private data member로 선언
-//main()에서는 class의 public function의 호출로 미로 찾기
-//*/
-//void main() {
+	//start at (1,1)
+	mark[1][1] = 1;
+	Stack2 st = new Stack2(50);
+	items temp = new items(1,1,2); 
+	st.push(temp);                               
 
+	while (!st.isEmpty()) // stack not empty
+	{
+		temp = st.pop(); // unstack
+		int i = temp.x; int j = temp.y; int d = temp.dir;
+		while (d < 8) // moves forward
+		{
+			//outFile << i << " " << j << " " << d << endl;
+			int g = i + moves[d].a;
+			int h = j + moves[d].b;
+			if ((g == m) && (h == p)) { // reached exit
+										// output path
+	//			cout << stack;
+
+		//		cout << "the term near the exit: " << i << " " << j << endl;
+		//		cout << "exit: " << m << " " << p << endl;
+				return;
+			}
+			if ((maze[g][h] != 0) && (mark[g][h] != 0)) { // new position
+				mark[g][h] = 1;
+				//push the old temp to the stack, but the direction changes.
+				//Because the neighbor in the direction of d has been checked.
+				temp.x = i;  temp.y = j; temp.dir = d + 1;
+				st.push(temp); // stack it
+				i = g; j = h; d = 0; // moves to (g,h)
+			}
+			else d++; // try next direction
+		}
+	}
+	//cout << "no path in maze " << endl;
+}
+
+	/*
+	 * //maze[][], mark[][]를 class의 private data member로 선언 //main()에서는 class의
+	 * public function의 호출로 미로 찾기 //
+	 */
+//void main() {
+	public static void main(String[] args) {
 		int input[][] = { // 12 x 15
-				{ 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1 }, 
+				{ 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1 },
 				{ 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1 },
 				{ 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0 },
-				{ 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1 }, 
+				{ 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1 },
 				{ 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1 },
 				{ 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1 },
 				{ 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1 },
-				{ 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 }, 
+				{ 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 },
 				{ 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0 },
 				{ 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0 },
 				{ 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0 }, };
-		for (int ia = 0; ia < 8; ia++)
-		moves[ia] = new Offsets(0, 0);
+
 		moves[0].a = -1;
 		moves[0].b = 0;
 		moves[1].a = -1;
