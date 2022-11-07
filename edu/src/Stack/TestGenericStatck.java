@@ -8,7 +8,7 @@ public class TestGenericStatck {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		Point p = new Point (8 , 8);
-		Stack2 s = new Stack2 (64); // 최대 64 개를 푸시할 수 있는 스택
+		Stack3 s = new Stack3 (64); // 최대 64 개를 푸시할 수 있는 스택
 		
 		while (true) {
 			System.out.println(); // 메뉴 구분을 위한 빈 행 추가

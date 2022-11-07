@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Insert"/>
+		<item key="selection" value="swap"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="name"/>
-			<item value="Insert"/>
-			<item value="Inser"/>
-			<item value="iter3"/>
-			<item value="obj"/>
-			<item value="list3"/>
+			<item value="swap"/>
+			<item value="quick"/>
+			<item value="scan"/>
+			<item value="next"/>
+			<item value="data"/>
+			<item value="row"/>
+			<item value="cy"/>
+			<item value="st"/>
+			<item value="path"/>
+			<item value="stack"/>
+			<item value="Point"/>
+			<item value="cout"/>
 			<item value="set"/>
-			<item value="&#x09;&#x09;Empl"/>
-			<item value="Empl"/>
-			<item value="show();"/>
-			<item value="setPerson"/>
-			<item value="setPe"/>
-			<item value="ab"/>
-			<item value="abs"/>
-			<item value="get"/>
+			<item value="import"/>
+			<item value="name"/>
 		</list>
 		<list key="replacehistory">
+			<item value="st"/>
+			<item value="items"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="351"/>
-		<item key="DIALOG_Y_ORIGIN" value="124"/>
+		<item key="DIALOG_X_ORIGIN" value="929"/>
+		<item key="DIALOG_Y_ORIGIN" value="129"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
