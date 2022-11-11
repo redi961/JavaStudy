@@ -1,6 +1,8 @@
 package Stack;
 //퀵 정렬(비재귀 버전)
 
+import java.util.Stack;
+
 import Stack.Stack3;
 
 public class QuickSort2 {
@@ -15,11 +17,31 @@ public class QuickSort2 {
 	// --- 퀵 정렬(비재귀 버전)---//
 	static void quickSort(int[] a, int left, int right) {
 
-		Stack3 lst = new Stack3 (10);
-		Stack3 rst = new Stack3 (10);
+		Stack<Point> lst = new Stack<>();
+		Point px = new Point(left, right);
+		lst.push(px);
+		while (lst.isEmpty() != true) {
+			px = lst.pop();
+			int pl = left = px.ix;
+			int pr = right = px.iy;
+			int x = a[(left + right) / 2];
+			
+			do {
+				while (a[pl] < x) pl++;
+				while (a[pr] > x) pr--;
+				if (pl <= pr)
+					swap(a, pl++, pr--);
+			}while (pl <= pr);
+		if (left < pr) {
+			Point pt = new Point(left, pr);
+			lst.push(pt);
+		}
+		if (pl < right) {
+			Point pt = new Point(pl, right);
+			lst.push(pt);
+		}
 		
-		Point pt = new Point(left, right);
-		
+		}
 	}
 
 	public static void main(String[] args) {

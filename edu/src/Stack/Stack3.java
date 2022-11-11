@@ -4,7 +4,7 @@ class Point {
 	public int ix;
 	public int iy;
 	public int capacity;
-
+	
 	public Point(int x, int y) {
 		this.ix = x;
 		this.iy = y;
