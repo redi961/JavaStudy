@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Compare"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value=".key"/>
+			<item value="&lt;Type&gt;"/>
+			<item value="template &lt;class Type&gt;"/>
+			<item value="*"/>
+			<item value="&amp;"/>
+			<item value="Element&lt;Type&gt;"/>
+			<item value="compar"/>
 			<item value="compare"/>
 			<item value="merge"/>
 			<item value="swap"/>
@@ -16,22 +23,17 @@
 			<item value="next"/>
 			<item value="data"/>
 			<item value="row"/>
-			<item value="cy"/>
-			<item value="st"/>
-			<item value="path"/>
-			<item value="stack"/>
-			<item value="Point"/>
-			<item value="cout"/>
-			<item value="set"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="int"/>
 			<item value="st"/>
 			<item value="items"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="929"/>
-		<item key="DIALOG_Y_ORIGIN" value="129"/>
+		<item key="DIALOG_X_ORIGIN" value="1249"/>
+		<item key="DIALOG_Y_ORIGIN" value="132"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
